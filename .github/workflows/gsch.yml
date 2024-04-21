@@ -1,4 +1,4 @@
-name: test
+name: gsch
 
 on:
     workflow_dispatch:
@@ -9,8 +9,8 @@ permissions:
     id-token: write
 
 jobs:
-    test:
-        name: test
+    gsch:
+        name: gsch
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v4
@@ -24,7 +24,7 @@ jobs:
               env:
                 NOTION_DB_TOK: ${{ secrets.NOTION_DB_TOK }}
               run: |
-                python3 -m pip install requests
+                python3 -m pip install requests beautifulsoup4
                 git clone git@github.com:hczhai/auto-gh-actions.git
                 cd auto-gh-actions
-                python3 test.py
+                python3 google-scholar.py
