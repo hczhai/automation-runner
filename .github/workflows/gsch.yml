@@ -24,7 +24,7 @@ jobs:
               env:
                 NOTION_DB_TOK: ${{ secrets.NOTION_DB_TOK }}
               run: |
-                python3 -m pip install requests beautifulsoup4
+                python3 -m pip install requests beautifulsoup4 pytz
                 git clone git@github.com:hczhai/auto-gh-actions.git
                 cd auto-gh-actions
                 python3 google-scholar.py
