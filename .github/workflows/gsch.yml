@@ -2,7 +2,7 @@ name: gsch
 
 on:
     schedule:
-      - cron: '15 13 * * *'
+      - cron: '15 10 * * *'
     workflow_dispatch:
 
 permissions:
